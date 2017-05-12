@@ -11,7 +11,7 @@ public class SnakeCamelUtilTest {
 	public void snakeToCamelcaseでnishihara_mihoからNishiharaMihoに変換できる() {
 		SnakeCamelUtil scu = new SnakeCamelUtil();
 		String expected = "NishiharaMiho";
-		String actual = scu.snakeToCamelcase("nishihara_miho");
+		String actual = scu.snakeToCamelcase("_nishihara_miho");
 		assertThat(actual, is(expected));
 	}
 	
@@ -19,7 +19,7 @@ public class SnakeCamelUtilTest {
 	public void snakeToCamelcaseでmath_test_firstからMathTestFirstに変換できる() {
 		SnakeCamelUtil scu = new SnakeCamelUtil();
 		String expected = "MathTestFirst";
-		String actual = scu.snakeToCamelcase("math_test_first");
+		String actual = scu.snakeToCamelcase("___math_test_first");
 		assertThat(actual, is(expected));
 	}
 	
